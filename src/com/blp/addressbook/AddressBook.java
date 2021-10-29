@@ -8,6 +8,7 @@ import java.util.Scanner;
  */
 public class AddressBook {
     private ArrayList<Contacts>list = new ArrayList<Contacts>();
+
     public static void main(String[] args) {
         System.out.println("Welcome to Address book program");
         Scanner sc = new Scanner(System.in);
