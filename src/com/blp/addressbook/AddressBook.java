@@ -7,7 +7,8 @@ import java.util.Scanner;
  * Address book creation
  */
 public class AddressBook {
-    private ArrayList<Contacts>list = new ArrayList<Contacts>();
+    private ArrayList<Contacts> list = new ArrayList<Contacts>();
+
     public static void main(String[] args) {
         System.out.println("Welcome to Address book program");
         Scanner sc = new Scanner(System.in);
@@ -15,9 +16,12 @@ public class AddressBook {
         System.out.println(" 2. Edit contact. ");
         System.out.println(" 3. Delete contact. ");
         int choice = sc.nextInt();
-        while (choice != 0) {
-            switch (choice) {
-                case 1:
+        AddressBook contact1 = new AddressBook();
+
+        switch (choice) {
+
+            case 1:
+                while (choice != 0) {
                     System.out.println("Enter Contact Details");
                     System.out.println("Enter firstname");
                     String firstName = sc.next();
@@ -35,20 +39,13 @@ public class AddressBook {
                     long mobNum = sc.nextLong();
                     System.out.println("Enter email-Id");
                     String emailId = sc.next();
-                    AddressBook contact1 = new AddressBook();
                     contact1.addContact(firstName, lastName, address, city, state, zip, mobNum, emailId);
-                    break;
-                case 2:
-                    System.out.println("Edit Contact");
-                    break;
-                case 3:
-                    System.out.println("Delete Contact");
-                    break;
-                default:
-                    System.out.println("Enter valid Number");
-            }
-            System.out.println("Program ended..Thank You");
+                }
+                break;
+            default:
+                System.out.println("Enter valid Number");
         }
+        System.out.println("Program ended..Thank You");
     }
 
     private void addContact(String firstName, String lastName, String address, String city, String state, int zip, long mobNum, String emailId) {
