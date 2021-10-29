@@ -17,7 +17,7 @@ public class AddressBook {
         System.out.println(" 3. Delete contact. ");
         int choice = sc.nextInt();
         while (choice != 0) {
-            switch (choice) {
+            switch (choice) {  //Choice the condition
                 case 1:
                     System.out.println("Enter Contact Details");
                     System.out.println("Enter firstname");
