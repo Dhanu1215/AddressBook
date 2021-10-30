@@ -1,5 +1,7 @@
 package com.blp.addressbook;
 
+import java.util.ArrayList;
+
 class Contacts {
     private String firstName = " ";
     private String lastName = " ";
@@ -9,7 +11,6 @@ class Contacts {
     private int zip = 0;
     private long mobNum = 0;
     private String emailId = " ";
-
 
     Contacts(String firstName, String lastName, String address, String city, String state, int zip, long mobNum, String emailId) {
         this.firstName = firstName;
@@ -26,12 +27,16 @@ class Contacts {
         return firstName;
     }
 
-    public String setFirstName() {
-        return firstName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
         return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getAddress() {
@@ -40,10 +45,6 @@ class Contacts {
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
 
     public String getCity() {
@@ -74,17 +75,18 @@ class Contacts {
         return mobNum;
     }
 
-    public long setMobNum(long mobNum) {
-       return mobNum;
+    public void setMobNum(long mobNum) {
+        this.mobNum = mobNum;
     }
 
     public String getEmailId() {
         return emailId;
     }
 
-    public String setEmailId() {
-        return emailId;
+    public void setEmailId(String emailId) {
+        this.emailId = emailId;
     }
+
     public String toString() {
         String contactDetails = firstName + lastName + address + city + state + zip + mobNum + emailId;
         return contactDetails;
