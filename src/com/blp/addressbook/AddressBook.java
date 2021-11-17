@@ -1,18 +1,20 @@
 package com.blp.addressbook;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
  * Address book creation
  */
 public class AddressBook {
-    private ArrayList<Contacts> contact = new ArrayList<>();
+    private static List<Contacts> list = new ArrayList<Contacts>();
     private static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         System.out.println("Welcome to Address book program");
         menu();
+        System.out.println(list);
     }
 
     private static void menu() {
@@ -83,8 +85,9 @@ public class AddressBook {
 
     private void addContact(String firstName, String lastName, String address, String city, String state, int zip, long mobNum, String emailId) {
         Contacts person = new Contacts(firstName, lastName, address, city, state, zip, mobNum, emailId);
-        contact.add(person);
+        list.add(person);
         // person.display();
     }
+
 }
 
